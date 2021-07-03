@@ -1,0 +1,170 @@
+@font-face {
+    font-family: mono;
+    src: url(assets/font/Courier\ New.ttf);
+  }
+  
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    padding: 0;
+    font-family: mono;
+    font-size: 1.6vw;
+    line-height: 1.4em;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+
+    display: inline-block;
+    box-shadow: 0px 0px 8px #b9b9b9;
+    z-index: 10000;
+    text-align: center;
+    display: inline-block;
+    align-items: center; 
+}
+
+button {
+ border: none;
+ font-size: inherit;
+ font-family: mono;
+
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container {
+    position: absolute;
+    width: 50em;
+    padding-bottom: 10em;
+}
+
+.container {
+    top: 6em;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, 0%);
+}
+
+.navigation {
+    position: fixed;
+    top: 2em;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, 0%);
+    z-index: 100000; 
+}
+
+.layer_container {
+    position: fixed;
+    z-index: 1000;
+}
+
+.layer {
+    width: 100vw;
+    height: 8vw;
+    color: rgb(240, 240, 240);
+    background-image: linear-gradient(to top, rgba(240,240,240,0), rgba(240,240,240,1));
+    z-index: 1000;
+}
+
+.hiddenlayer {
+    
+    width: 100vw;
+    height: 4vw;
+    background-color: rgb(240, 240, 240);
+    z-index: 9999999;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+.layer_container.bottom > .layer
+
+{
+    background-image: linear-gradient(to bottom, rgba(240,240,240,0), rgba(240,240,240,1));
+}
+
+.writer, .time {
+    display: inline;
+    font-size: 0.45em;
+    vertical-align: 0.6em;
+}
+
+.writer {
+    padding-right: 1em;
+}
+
+.time {
+    padding-right: 2em;
+}
+
+
+
+textarea, input {
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+textarea {
+    width: 400px;
+    height: 100px;
+}
+
+.shortcut {
+    position: fixed;
+    font-size: 0.6em;
+    bottom: 50;
+    left: 50%;
+    padding: 0 1em 0 1em;
+    /* bring your own prefixes */
+    transform: translate(-50%, 0%);
+    z-index: 100000;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 8px #b9b9b9;
+    border-radius: 1em;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    -webkit-filter: drop-shadow( 0px 0px 8px #b9b9b9);
+    filter: drop-shadow( 0px 0px 8px #b9b9b9);
+    position: fixed;
+    top: 50%;
+    /* left: 0; */
+    /* bring your own prefixes */
+    transform: translate(0, -50%);
+}
+
+.arrow.right {
+    border-width: 30px 0 30px 30px;
+    right: 50;
+    border-color: transparent transparent transparent rgb(240 240 240);
+}
+
+.arrow.left {
+    left: 50;
+    border-width: 30px 30px 30px 0;
+    border-style: solid;
+    z-index: 999999;
+    border-color: transparent rgb(240 240 240) transparent transparent;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}

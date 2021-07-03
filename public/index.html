@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src ="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Storytelling</title>
+</head>
+<body>
+    <div class="navigation" id = "navigation">
+        
+        <button id ="1" class="dot" >1</button>
+        <button id = "2" class="dot" >2</button>
+        <button id ="3" class="dot" >3</button>
+        <button id = "4" class="dot" >4</button>
+        <button id = "5" class="dot" >5</button>
+        <button id = "6" class="dot" >6</button>
+        <button id = "7" class="dot" >7</button>
+        <button id = "8" class="dot" >8</button>
+        <button id = "9" class="dot" >9</button>
+        <button id = "10" class="dot" >10</button>
+        <button id = "11" class="dot" >11</button>
+    </div>
+    <div class="layer_container">
+        <div class="hiddenlayer"></div>
+        <div class="layer"></div>
+    </div>
+    
+    <div class="container">
+
+
+    <div id="comment_container">
+      
+        <div class="nodisplay" id="story1"></div>
+        <div class="nodisplay" id="story2"></div>
+        <div class="nodisplay" id="story3"></div>
+        <div class="nodisplay" id="story4"></div>
+        <div class="nodisplay" id="story5"></div>
+        <div class="nodisplay" id="story6"></div>
+        <div class="nodisplay" id="story7"></div>
+        <div class="nodisplay" id="story8"></div>
+        <div class="nodisplay" id="story9"></div>
+        <div class="nodisplay" id="story10"></div>
+        <div class="nodisplay" id="story11"></div>
+
+    </div>
+
+    
+    
+    <br><br>
+    <textarea id ="message" placeholder="Continue the story..."></textarea><br><br>
+    <input type="text" id ="name" name="name" placeholder="your name"></textarea><br><br>
+    <input type="button" id="button" value="Send">
+    </div>  
+
+   <div class="layer_container bottom">
+        <div class="layer"></div>
+        <div class="hiddenlayer"></div>
+    </div>
+
+   <a href="javascript: scrollToForm();"> <div class="shortcut">Continue the story</div></a>
+
+    <!-- arrows -->
+    <div id="arrow">
+    <div class="arrow right" id="right"></div>
+    <div class="arrow left" id="left"></div>
+    </div>
+</body>
+
+
+<script src="sketch.js"></script>
+
+</html>

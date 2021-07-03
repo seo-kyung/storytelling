@@ -1,0 +1,19 @@
+{
+  "name": "storytelling",
+  "version": "1.0.0",
+  "description": "This is a storytelling platform for STRP project by Sunjoo Lee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "storytelling"
+  ],
+  "author": "Seo Kim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "nedb": "^1.8.0"
+  }
+}

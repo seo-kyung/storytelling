@@ -5,8 +5,7 @@ var pressed;
 
 document.getElementById("navigation").addEventListener("click", someFunction);
 document.getElementById("button").addEventListener("click", sendFunction);
-document.getElementById("right").addEventListener("click", nextFunction);
-document.getElementById("left").addEventListener("click", prevFunction);
+document.getElementById("arrow").addEventListener("click", nextFunction);
 
 function someFunction(event) {
   if(currentStoryline != event.target.id  && !isNaN(event.target.id) || event.target.id == 1){
@@ -50,35 +49,37 @@ function someFunction(event) {
  } 
 
 
-function nextFunction(){
- 
+function nextFunction(event){
+  
   var previous_container = "story"+ pressed;
-  document.getElementById(currentStoryline).style.borderColor = "transparent";
-  var next = parseInt(pressed) + 1;
-  var nextp = next + '';
-  var next_container = "story" + next;
-  console.log(next_container);
-  pressed++;
-  document.getElementById(previous_container).innerHTML = "";
-  getData(nextp, next_container);
-  document.getElementById(nextp).style.borderStyle = "solid";
-  document.getElementById(nextp).style.borderColor = "lawngreen";
-  currentStoryline = nextp;
-}
+  document.getElementById(pressed).style.borderColor = "transparent";
+  if(event.target.id =="right"){ 
+    var next = parseInt(pressed) + 1;
+    pressed++;
+    slide();
+    
+  } if(event.target.id == "left"){
+    var next = parseInt(pressed) - 1;
+    pressed --;
+    slide();
+  } if(pressed > 11 || pressed < 1){
+    return
+  }
 
-function prevFunction(){
-  var previous_container = "story"+ pressed;
-  document.getElementById(currentStoryline).style.borderColor = "transparent";
-  var next = parseInt(pressed) - 1;
-  var nextp = next + '';
-  var next_container = "story" + next;
-  console.log(next_container);
-  pressed--;
-  document.getElementById(previous_container).innerHTML = "";
-  getData(nextp, next_container);
-  document.getElementById(nextp).style.borderStyle = "solid";
-  document.getElementById(nextp).style.borderColor = "lawngreen";
-  currentStoryline = nextp;
+  function slide(){
+    
+    var nextp = next + '';
+    var next_container = "story" + next;
+    document.getElementById(previous_container).innerHTML = "";
+    getData(nextp, next_container);
+    document.getElementById(nextp).style.borderStyle = "solid";
+    document.getElementById(nextp).style.borderColor = "lawngreen";
+    currentStoryline = nextp;
+    
+  
+  
+  }
+ 
 }
 
 
@@ -119,6 +120,7 @@ async function getData(para, para1){
 function scrollToForm() {
   document.querySelector('#message').scrollIntoView({behavior: 'smooth'});
 }
+
 
 
 
